@@ -15,6 +15,9 @@ function ProductDetails() {
         fetchProductDetails()
     }, [id])
 
+    const handleBuyNow = ()=>{
+        window.confirm("The product is out of stock!")
+    }
 
 
 
@@ -32,7 +35,7 @@ function ProductDetails() {
                 <p className='product-price'>
                     ${productDetails.price}
                 </p>
-                <button className='buy-now-button'>Buy now</button>
+                <button className='buy-now-button' onClick={handleBuyNow}>Buy now</button>
                 <Link to='/'>
                     <button className='go-back-home-button'>Go back to home</button>
                 </Link>
