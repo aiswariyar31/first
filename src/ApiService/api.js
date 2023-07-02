@@ -18,13 +18,3 @@ export const getProductId = async(id)=>{
 
 
 }
-
-
-
-export const getProductImage = async(id)=>{
-
-    const response = await axios.get(`${BASE_URL}/products/${id}/image`)
-    return response.data;
-
-
-}
